@@ -67,7 +67,7 @@ def score(current_roll):
         else:
             no_score += [e.value]
 
-    return dice_score, no_score
+    return dice_score
 
 
 def roll(num_of_dice):

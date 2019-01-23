@@ -53,7 +53,7 @@ while win == False:
 
     while human.turn:
         rolled_dice = Turn.roll(human_rolling)
-        rolled_score, non_scoring = Turn.score(rolled_dice)
+        rolled_score = Turn.score(rolled_dice)
 
         print(human.name + "! You rolled: ")
         print(rolled_dice)
@@ -88,7 +88,7 @@ while win == False:
 
     while computer.turn:
         rolled_dice = Turn.roll(comp_rolling)
-        rolled_score, non_scoring = Turn.score(rolled_dice)
+        rolled_score = Turn.score(rolled_dice)
 
         print(computer.name + " rolled: ")
         print(rolled_dice)
@@ -114,12 +114,8 @@ while win == False:
                 human.turn = True
                 break
 
-        for n in range(len(non_scoring)):
-            for i in range(len(rolled_dice)):
-                if non_scoring[n].index == rolled_dice[i].index:
-                    rolled_dice.remove(rolled_dice[i])
-
-        computer.turn_score += Turn.score(rolled_dice)
+        comp_fin_score = Turn.score(rolled_dice)
+        computer.turn_score = comp_fin_score
 
         comp_rolling = rolled_dice
 
