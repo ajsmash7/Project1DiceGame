@@ -88,7 +88,7 @@ def roll(num_of_dice):
     d_roll = []
 
     for j in another_roll:
-        new_die = Die(j)
+        new_die = Die(g, j)
         d_roll += [new_die]
         g += 1
 
