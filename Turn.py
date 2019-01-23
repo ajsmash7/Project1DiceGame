@@ -52,8 +52,7 @@ def score(current_roll):
 
     # based on quantity of matches
     match_qty = len(match)
-    match_val = match[0]
-    print(match_val)
+    match_val = match[0].value
 
     if match_qty > 3:
         dup_score = sets_score.get(match_val)
