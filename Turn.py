@@ -92,7 +92,7 @@ def roll(num_of_dice):
         d_roll += [new_die]
         g += 1
 
-    return d_roll, another_roll
+    return d_roll
 
 
 def save(filename, addScore):
